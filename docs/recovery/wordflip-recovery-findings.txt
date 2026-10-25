@@ -1,0 +1,41 @@
+WordFlip recovery audit — 2026-10-25
+
+Scope: readable metadata in the Yandex Disk folder “Mac — проекты и восстановление — 2026-10-24”.
+All 9 readable files reviewed: RESTORE.txt, PROJECTS.txt, COMPLETE.json, CHECKS.txt, SHA256SUMS.txt, BACKUP-COMPLETE.txt, restore.sh, OLLAMA-MODELS.txt, XCODE-AND-UNITY.txt.
+
+Confirmed from metadata
+- 123 encrypted parts, 38,564,117,520 bytes (35.92 GiB / 38.56 GB).
+- Set 01 has 9 parts; set 02 has 109; sets 03–07 have one each.
+- Part hashes agree between COMPLETE.json and SHA256SUMS.txt. Archive bytes have NOT been downloaded and revalidated.
+- Downloaded restore.sh matches the script hash recorded in COMPLETE.json. It was read, not executed.
+- Old Xcode: 26.5 (17F42). Current Mac: 27.1 (27A9275).
+- Canonical knowledge base: Documents/Языки/knowledge-base, relative to the old home directory. README.md, WORKFLOW.md, PORTFOLIO.md and DECISIONS.md are named as starting points. Their content remains encrypted.
+- Local Git objects for the old “Языки” project are explicitly listed. Local Git does not establish a GitHub push.
+
+Final update set 07
+- Contains recorded paths, sizes and hashes for NewFrench and NewItalian project.pbxproj files.
+- Lists French-1.3-7.xcarchive and Italian-1.3-4.xcarchive. Names suggest version 1.3 / builds 7 and 4; actual plist values and store state are unverified.
+- Lists NewFrench.ipa, NewItalian.ipa, build/export logs and upload-french.log. A log filename does not prove upload success or publication.
+- JSON contains metadata, not embedded source or resource contents.
+
+Historical verification and limits
+- CHECKS.txt records a sample cloud download/hash match and verification of 357 final-update members.
+- Full large-archive restore was NOT performed on the old Mac. These historical statements are not a fresh archive validation.
+- Two changing Git objects were reportedly repaired by frozen copies in set 07.
+- Skipped runtime sockets and one deleted old screenshot are documented. Most exclusions are generated caches/build output.
+
+Still unavailable without the original key
+- Swift sources, dictionaries, lessons, images and knowledge-base contents.
+- Verified bundle IDs, schemes, dependency graph and shared-code/resource relationships.
+- Mapping to the 18 published App Store Connect apps.
+
+Safe continuation
+1. Preserve the cloud backup and readable metadata.
+2. Locate the original key or a separate unencrypted source copy.
+3. With the key, download complete relevant sets and verify SHA256 before isolated, selective extraction. Apply relevant set 07 updates last. Do not restore unrelated projects or machine settings wholesale.
+4. Read the recovered knowledge base fully before changing projects; reconcile App Store IDs and bundle IDs against App Store Connect.
+5. Do not recreate projects or change published apps before the backup review.
+
+The accompanying CSV lists historical Xcode project paths, excluding evidence/source-before and work/release copies. It is not an App Store app registry. Arabic and English project paths also exist in PROJECTS.txt; their membership in the published portfolio is unverified.
+
+No source files, signing settings or published apps were modified during this audit.
